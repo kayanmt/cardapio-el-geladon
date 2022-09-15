@@ -2,10 +2,15 @@ import PaletaLista from "./PaletaLista";
 import './Home.css';
 import sacola from "../assets/icons/sacola.svg";
 import logo from "../assets/logo.svg";
+import AdicionaPaletaModal from "components/AdicionaPaletaModal/AdicionaPaletaModal";
+import { useState } from "react";
 
 function Home() {
+    const [canShowAdicionaPaletaModal, setCanShowAdicionaPaletaModal] = useState(false);
+    const [paletaParaAdicionar, setPaletaParaAdicionar] = useState();
     return (
     <div className="Home">    
+    <Navbar createPaleta={() => setCanShowAdicionaPaletaModal(true)} />
     <div className="Home__header Header">
   <div className="row">
       <div className="Header__logo Logo">
@@ -30,10 +35,31 @@ function Home() {
   </div>
 </div>  
         <div className="Home__container">
+        <PaletaLista paletaCriada={paletaParaAdicionar} />
+                {
+                    canShowAdicionaPaletaModal && (
+                    <AdicionaPaletaModal
+                        closeModal={() => setCanShowAdicionaPaletaModal(false)}
+                        onCreatePaleta={(paleta) => setPaletaParaAdicionar(paleta)} />
+                    )
+                }
         <PaletaLista />
+        {
+                    canShowAdicionaPaletaModal &&
+                    (<AdicionaPaletaModal closeModal={() => setCanShowAdicionaPaletaModal(false)} />)
+                }
+        <AdicionaPaletaModal />
         </div>
     </div>
+    
   );
+  {
+    canShowAdicionaPaletaModal &&
+    <AdicionaPaletaModal
+        closeModal={() => setCanShowAdicionaPaletaModal(false)}
+        onCreatePaleta={(paleta) => setPaletaParaAdicionar(paleta)}
+        />
+}
   }
   
   export default Home;
