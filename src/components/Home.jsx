@@ -2,7 +2,7 @@ import PaletaLista from "./PaletaLista";
 import './Home.css';
 import sacola from "../assets/icons/sacola.svg";
 import logo from "../assets/logo.svg";
-import AdicionaPaletaModal from "components/AdicionaPaletaModal/AdicionaPaletaModal";
+import AdicionaPaletaModal from "../components/AdicionaPaletaModal/AdicionaPaletaModal";
 import { useState } from "react";
 
 function Home() {

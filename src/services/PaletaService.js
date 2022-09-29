@@ -1,4 +1,4 @@
-import { Api } from "helpers/Api";
+import { Api } from "../helpers/Api";
 
 const parseResponse = (response) => response.json();
 
@@ -21,7 +21,7 @@ const parseTransformLista = (response) =>
 export const PaletaService = {
   create: (paleta) => fetch(Api.createPaleta(), { method: "POST", body: JSON.stringify(paleta), mode: "cors", headers: {
     "Content-Type": "application/json",
-} }).then(parseTransformItem),
+} }).then(parseTransformLista),
   getLista: () =>
     fetch(Api.paletaLista(), { method: "GET" }).then(parseTransformLista),
   getById: (id) =>
