@@ -4,6 +4,7 @@ import sacola from "../assets/icons/sacola.svg";
 import logo from "../assets/logo.svg";
 import AdicionaPaletaModal from "../components/AdicionaPaletaModal/AdicionaPaletaModal";
 import { useState } from "react";
+import Navbar from "../components/Navbar/Navbar";
 
 function Home() {
     const [canShowAdicionaPaletaModal, setCanShowAdicionaPaletaModal] = useState(false);
@@ -46,7 +47,10 @@ function Home() {
         <PaletaLista />
         {
                     canShowAdicionaPaletaModal &&
-                    (<AdicionaPaletaModal closeModal={() => setCanShowAdicionaPaletaModal(false)} />)
+                    (<AdicionaPaletaModal 
+                    closeModal={() => setCanShowAdicionaPaletaModal(false)} 
+                    onCreatePaleta={(paleta) => setPaletaParaAdicionar(paleta)}
+                    />)
                 }
         <AdicionaPaletaModal />
         </div>

@@ -1,7 +1,7 @@
 import "./Navbar.css";
-import paleta from "assets/icons/paleta.svg"
-import sacola from "assets/icons/sacola.svg";
-import logo from "assets/logo.svg";
+import paleta from "../../assets/icons/paleta.svg"
+import sacola from "../../assets/icons/sacola.svg";
+import logo from "../../assets/logo.svg";
 
 function Navbar() {
     function Navbar({ createPaleta }) {

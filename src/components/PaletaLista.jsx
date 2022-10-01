@@ -4,6 +4,7 @@ import PaletaListaItem from "../components/PaletaListaItem/PaletaListaItem";
 import { PaletaService } from "../services/PaletaService";
 import PaletaDetalhesModal from "../components/PaletaDetalhesModal/PaletaDetalhesModal";
 
+
 function PaletaLista({ paletaCriada }) {
   const [paletas, setPaletas] = useState([]);
 

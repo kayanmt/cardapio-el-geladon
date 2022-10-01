@@ -1,15 +1,25 @@
 import "./PaletaListaItem.css";
-import { PaletaService } from "../../services/PaletaService";
-import PaletaLista from "../PaletaLista";
-import { useState, useEffect } from "react";
-import PaletaDetalhesModal from "../PaletaDetalhesModal/PaletaDetalhesModal";
 
-
-function PaletaListaItem({ paleta, quantidadeSelecionada, index, onRemove, onAdd }) 
-{
-
-  <button className={`Acoes__adicionar ${!quantidadeSelecionada && "Acoes__adicionar--preencher"}`} onClick={() => onAdd(index)}>adicionar</button>
-
+function PaletaListaItem({
+  paleta,
+  quantidadeSelecionada,
+  index,
+  onRemove,
+  onAdd,
+  clickItem,
+}) {
+  const removeButton = (canRender, index) =>
+    Boolean(canRender) && (
+      <button
+        className="Acoes__remover"
+        onClick={(e) => {
+          e.stopPropagation();
+          onRemove(index);
+        }}
+      >
+        remover
+      </button>
+    );
 
   const badgeCounter = (canRender) =>
     Boolean(canRender) && (
@@ -40,18 +50,5 @@ function PaletaListaItem({ paleta, quantidadeSelecionada, index, onRemove, onAdd
     </div>
   );
 }
-{
-    paletas.map((paleta, index) => (
-      <PaletaListaItem
-        key={`PaletaListaItem-${index}`}
-        paleta={paleta}
-        quantidadeSelecionada={paletaSelecionada[index]}
-        index={index}
-        onAdd={(index) => adicionarItem(index)}
-        onRemove={(index) => removerItem(index)}
-        clickItem={(paletaId) => setPaletaModal(paleta)}
-      />
-    ));
-  }
 
 export default PaletaListaItem;
