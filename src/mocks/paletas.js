@@ -1,183 +1,173 @@
 export const paletas = [
   {
-    titulo: "Açaí com Leite Condensado",
-    descricao:
+    name: "Açaí com Leite Condensado",
+    type: "Quam vulputate dignissim suspendisse in est ante in nibh mauris.",
+    note:
       "Quam vulputate dignissim suspendisse in est ante in nibh mauris.",
-    foto: "assets/images/acai-com-leite-condensado.png",
-    preco: 10.0,
-    sabor: "Açaí",
-    recheio: "Leite Condensado",
-    possuiRecheio: true,
+    link: "assets/images/acai-com-leite-condensado.png",
+    priority: 10.0,
+    deadline: "Açaí",
   },
   {
-    titulo: "Banana com Nutella",
-    descricao:
+    name: "Banana com Nutella",
+    type: "Quam vulputate dignissim suspendisse in est ante in nibh mauris.",
+    note:
       "Quam vulputate dignissim suspendisse in est ante in nibh mauris.",
-    foto: "assets/images/banana-com-nutella.png",
-    preco: 10.0,
-    sabor: "Banana",
-    recheio: "Nutella",
-    possuiRecheio: true,
+    link: "assets/images/banana-com-nutella.png",
+    priority: 10.0,
+    deadline: "Banana",
   },
   {
-    titulo: "Chocolate Belga",
-    descricao:
+    name: "Chocolate Belga",
+    type: "Quam vulputate dignissim suspendisse in est ante in nibh mauris.",
+    note:
       "Quam vulputate dignissim suspendisse in est ante in nibh mauris.",
-    foto: "assets/images/chocolate-belga.png",
-    preco: 7.0,
-    sabor: "Chocolate Belga",
-    possuiRecheio: false,
+    link: "assets/images/chocolate-belga.png",
+    priority: 7.0,
+    deadline: "Chocolate Belga",
   },
   {
-    titulo: "Chocolate Belga com Brigadeiro",
-    descricao:
+    name: "Chocolate Belga com Brigadeiro",
+    type: "Quam vulputate dignissim suspendisse in est ante in nibh mauris.",
+    note:
       "Quam vulputate dignissim suspendisse in est ante in nibh mauris.",
-    foto: "assets/images/chocolate-belga-com-brigadeiro.png",
-    preco: 10.0,
-    sabor: "Chocolate Belga",
-    recheio: "Brigadeiro",
-    possuiRecheio: true,
+    link: "assets/images/chocolate-belga-com-brigadeiro.png",
+    priority: 10.0,
+    deadline: "Chocolate Belga",
   },
   {
-    titulo: "Chocolate Branco",
-    descricao:
+    name: "Chocolate Branco",
+    type: "Quam vulputate dignissim suspendisse in est ante in nibh mauris.",
+    note:
       "Quam vulputate dignissim suspendisse in est ante in nibh mauris.",
-    foto: "assets/images/chocolate-branco.png",
-    preco: 7.0,
-    sabor: "Chocolate Branco",
-    possuiRecheio: false,
+    link: "assets/images/chocolate-branco.png",
+    priority: 7.0,
+    deadline: "Chocolate Branco",
   },
   {
-    titulo: "Coco",
-    descricao:
+    name: "Coco",
+    type: "Quam vulputate dignissim suspendisse in est ante in nibh mauris.",
+    note:
       "Quam vulputate dignissim suspendisse in est ante in nibh mauris.",
-    foto: "assets/images/coco.png",
-    preco: 7.0,
-    sabor: "Coco",
-    possuiRecheio: false,
+    link: "assets/images/coco.png",
+    priority: 7.0,
+    deadline: "Coco",
   },
   {
-    titulo: "Coco com Doce de Leite",
-    descricao:
+    name: "Coco com Doce de Leite",
+    type: "Quam vulputate dignissim suspendisse in est ante in nibh mauris.",
+    note:
       "Quam vulputate dignissim suspendisse in est ante in nibh mauris.",
-    foto: "assets/images/coco-com-doce-de-leite.png",
-    preco: 10.0,
-    sabor: "Coco",
-    recheio: "Doce de Leite",
-    possuiRecheio: true,
+    link: "assets/images/coco-com-doce-de-leite.png",
+    priority: 10.0,
+    deadline: "Coco",
   },
   {
-    titulo: "Cookies",
-    descricao:
+    name: "Cookies",
+    type: "Quam vulputate dignissim suspendisse in est ante in nibh mauris.",
+    note:
       "Quam vulputate dignissim suspendisse in est ante in nibh mauris.",
-    foto: "assets/images/cookies.png",
-    preco: 7.0,
-    sabor: "Cookies",
-    possuiRecheio: false,
+    link: "assets/images/cookies.png",
+    priority: 7.0,
+    deadline: "Cookies",
   },
   {
-    titulo: "Doce de Leite com Doce de Leite",
-    descricao:
+    name: "Doce de Leite com Doce de Leite",
+    type: "Quam vulputate dignissim suspendisse in est ante in nibh mauris.",
+    note:
       "Quam vulputate dignissim suspendisse in est ante in nibh mauris.",
-    foto: "assets/images/doce-de-leite-com-doce-de-leite.png",
-    preco: 10.0,
-    sabor: "Doce de Leite",
-    recheio: "Doce de Leite",
-    possuiRecheio: true,
+    link: "assets/images/doce-de-leite-com-doce-de-leite.png",
+    priority: 10.0,
+    deadline: "Doce de Leite",
   },
   {
-    titulo: "Limão",
-    descricao:
+    name: "Limão",
+    type: "Quam vulputate dignissim suspendisse in est ante in nibh mauris.",
+    note:
       "Quam vulputate dignissim suspendisse in est ante in nibh mauris.",
-    foto: "assets/images/limao.png",
-    preco: 7.0,
-    sabor: "Limão",
-    possuiRecheio: false,
+    link: "assets/images/limao.png",
+    priority: 7.0,
+    deadline: "Limão",
   },
   {
-    titulo: "Maracujá",
-    descricao:
+    name: "Maracujá",
+    type: "Quam vulputate dignissim suspendisse in est ante in nibh mauris.",
+    note:
       "Quam vulputate dignissim suspendisse in est ante in nibh mauris.",
-    foto: "assets/images/maracuja.png",
-    preco: 7.0,
-    sabor: "Maracujá",
-    possuiRecheio: false,
+    link: "assets/images/maracuja.png",
+    priority: 7.0,
+    deadline: "Maracujá",
   },
   {
-    titulo: "Maracujá com Leite Condensado",
-    descricao:
+    name: "Maracujá com Leite Condensado",
+    type: "Quam vulputate dignissim suspendisse in est ante in nibh mauris.",
+    note:
       "Quam vulputate dignissim suspendisse in est ante in nibh mauris.",
-    foto: "assets/images/maracuja-com-leite-condensado.png",
-    preco: 10.0,
-    sabor: "Maracujá",
-    recheio: "Leite Condensado",
-    possuiRecheio: true,
+    link: "assets/images/maracuja-com-leite-condensado.png",
+    priority: 10.0,
+    deadline: "Maracujá",
   },
   {
-    titulo: "Milho Verde",
-    descricao:
+    name: "Milho Verde",
+    type: "Quam vulputate dignissim suspendisse in est ante in nibh mauris.",
+    note:
       "Quam vulputate dignissim suspendisse in est ante in nibh mauris.",
-    foto: "assets/images/milho-verde.png",
-    preco: 7.0,
-    sabor: "Milho Verde",
-    possuiRecheio: false,
+    link: "assets/images/milho-verde.png",
+    priority: 7.0,
+    deadline: "Milho Verde",
   },
   {
-    titulo: "Morango",
-    descricao:
+    name: "Morango",
+    type: "Quam vulputate dignissim suspendisse in est ante in nibh mauris.",
+    note:
       "Quam vulputate dignissim suspendisse in est ante in nibh mauris.",
-    foto: "assets/images/morango.png",
-    preco: 7.0,
-    sabor: "Morango",
-    possuiRecheio: false,
+    link: "assets/images/morango.png",
+    priority: 7.0,
+    deadline: "Morango",
   },
   {
-    titulo: "Morango com Leite Condensado",
-    descricao:
+    name: "Morango com Leite Condensado",
+    type: "Quam vulputate dignissim suspendisse in est ante in nibh mauris.",
+    note:
       "Quam vulputate dignissim suspendisse in est ante in nibh mauris.",
-    foto: "assets/images/morango-com-leite-condensado.png",
-    preco: 10.0,
-    sabor: "Morango",
-    recheio: "Leite Condensado",
-    possuiRecheio: true,
+    link: "assets/images/morango-com-leite-condensado.png",
+    priority: 10.0,
+    deadline: "Morango",
   },
   {
-    titulo: "Morango com Nutella",
-    descricao:
+    name: "Morango com Nutella",
+    type: "Quam vulputate dignissim suspendisse in est ante in nibh mauris.",
+    note:
       "Quam vulputate dignissim suspendisse in est ante in nibh mauris.",
-    foto: "assets/images/morango-com-nutella.png",
-    preco: 10.0,
-    sabor: "Morango",
-    recheio: "Nutella",
-    possuiRecheio: true,
+    link: "assets/images/morango-com-nutella.png",
+    priority: 10.0,
+    deadline: "Morango",
   },
   {
-    titulo: "Ninho com Nutella",
-    descricao:
+    name: "Ninho com Nutella",
+    type: "Quam vulputate dignissim suspendisse in est ante in nibh mauris.",
+    note:
       "Quam vulputate dignissim suspendisse in est ante in nibh mauris.",
-    foto: "assets/images/ninho-com-nutella.png",
-    preco: 10.0,
-    sabor: "Ninho",
-    recheio: "Nutella",
-    possuiRecheio: true,
+    link: "assets/images/ninho-com-nutella.png",
+    priority: 10.0,
+    deadline: "Ninho",
   },
   {
-    titulo: "Ninho com Ovomaltine",
-    descricao:
+    name: "Ninho com Ovomaltine",
+    type: "Quam vulputate dignissim suspendisse in est ante in nibh mauris.",
+    note:
       "Quam vulputate dignissim suspendisse in est ante in nibh mauris.",
-    foto: "assets/images/ninho-com-ovomaltine.png",
-    preco: 10.0,
-    sabor: "Ninho",
-    recheio: "Ovomaltine",
-    possuiRecheio: true,
+    link: "assets/images/ninho-com-ovomaltine.png",
+    priority: 10.0,
+    deadline: "Ninho",
   },
   {
-    titulo: "Uva",
-    descricao:
+    name: "Uva",
+    type: "Quam vulputate dignissim suspendisse in est ante in nibh mauris.",
+    note:
       "Quam vulputate dignissim suspendisse in est ante in nibh mauris.",
-    foto: "assets/images/uva.png",
-    preco: 7.0,
-    sabor: "Uva",
-    possuiRecheio: false,
+    link: "assets/images/uva.png",
+    priority: 7.0,
+    deadline: "Uva",
   },
 ];
