@@ -21,7 +21,7 @@ function Home() {
           alt="Logo El Geladon"
           className="Logo__icone"
       />
-      <span className="Logo__titulo"> El Geladon </span>
+      <span className="Logo__type"> El Geladon </span>
       </div>
       <div className="Header__opcoes Opcoes">
       <div className="Opcoes__sacola Sacola">

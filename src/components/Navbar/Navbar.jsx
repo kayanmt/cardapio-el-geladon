@@ -15,7 +15,7 @@ function Navbar() {
             alt="Logo El Geladon"
             className="Logo__icone"
           />
-          <span className="Logo__titulo"> El Geladon </span>
+          <span className="Logo__type"> El Geladon </span>
         </div>
         <div className="Header__opcoes Opcoes">
         <button type="button" className="Opcoes__paleta Paleta" onClick={() => createPaleta() }>

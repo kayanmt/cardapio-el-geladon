@@ -34,7 +34,7 @@
     line-height: 100%;
   }
   
-  .AdicionaPaletaModal__foto-label {
+  .AdicionaPaletaModal__link-label {
     display: flex;
     justify-content: center;
     width: 100%;
@@ -45,7 +45,7 @@
     padding: 5px 10px;
   }
   
-  .AdicionaPaletaModal__foto {
+  .AdicionaPaletaModal__link {
     display: none;
   }
   

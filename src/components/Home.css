@@ -45,7 +45,7 @@
     height: 45px;
   }
   
-  .Logo__titulo {
+  .Logo__type {
     position: absolute;
     left: 55px;
     font-family: "Exo";
@@ -105,7 +105,7 @@
       column-gap: 20px;
     }
   
-    .Logo__titulo {
+    .Logo__type {
       font-size: 1.5em;
     }
   }

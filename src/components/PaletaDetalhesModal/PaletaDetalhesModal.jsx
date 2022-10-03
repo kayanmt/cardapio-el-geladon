@@ -6,30 +6,30 @@ function PaletaDetalhesModal({ paleta, closeModal }) {
     <Modal closeModal={closeModal}>
       <div className="PaletaDetalhesModal">
         <div>
-          <div className="PaletaDetalhesModal__titulo"> {paleta.titulo} </div>
-          <div className="PaletaDetalhesModal__preco">
+          <div className="PaletaDetalhesModal__priority"> {paleta.priority} </div>
+          <div className="PaletaDetalhesModal__deadline">
             {" "}
-            R$ {Number(paleta.preco).toFixed(2)}{" "}
+            R$ {Number(paleta.deadline).toFixed(2)}{" "}
           </div>
-          <div className="PaletaDetalhesModal__descricao">
+          <div className="PaletaDetalhesModal__note">
             {" "}
-            <b>Sabor:</b> {paleta.sabor}{" "}
+            <b>Name:</b> {paleta.name}{" "}
           </div>
-          {paleta.recheio && (
-            <div className="PaletaDetalhesModal__descricao">
+          {paleta.type && (
+            <div className="PaletaDetalhesModal__note">
               {" "}
-              <b>Recheio:</b> {paleta.recheio}{" "}
+              <b>type:</b> {paleta.type}{" "}
             </div>
           )}
-          <div className="PaletaDetalhesModal__descricao">
+          <div className="PaletaDetalhesModal__note">
             {" "}
-            <b>Descrição:</b> {paleta.descricao}{" "}
+            <b>Descrição:</b> {paleta.note}{" "}
           </div>
         </div>
         <img
-          className="PaletaDetalhesModal__foto"
-          src={paleta.foto}
-          alt={`Paleta de ${paleta.sabor}`}
+          className="PaletaDetalhesModal__link"
+          src={paleta.link}
+          alt={`Paleta de ${paleta.name}`}
         />
       </div>
     </Modal>

@@ -39,17 +39,17 @@
     flex-direction: column;
   }
   
-  .PaletaListaItem__titulo {
+  .PaletaListaItem__type {
     font-size: 1.5em;
     font-weight: 700;
     line-height: 100%;
   }
   
-  .PaletaListaItem__descricao {
+  .PaletaListaItem__note {
     font-size: 0.85em;
   }
   
-  .PaletaListaItem__preco {
+  .PaletaListaItem__deadline {
     color: darkviolet;
   }
   
@@ -85,7 +85,7 @@
     width: 100%;
   }
   
-  .PaletaListaItem__foto {
+  .PaletaListaItem__link {
     height: 150px;
     margin-right: -60px;
   }

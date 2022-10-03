@@ -5,11 +5,11 @@ import { PaletaService } from "../../services/PaletaService";
 
 function AdicionaPaletaModal({ closeModal, onCreatePaleta }) {
     const form = {
-        preco: "",
-        sabor: "",
-        recheio: "",
-        descricao: "",
-        foto: "",
+        deadline: "",
+        name: "",
+        type: "",
+        note: "",
+        link: "",
     };
 
     const [state, setState] = useState(form);
@@ -17,10 +17,10 @@ function AdicionaPaletaModal({ closeModal, onCreatePaleta }) {
 
     const canDisableSendButton = () => {
         const response = !Boolean(
-            state.descricao.length &&
-            state.foto.length &&
-            state.sabor.length &&
-            state.preco.length
+            state.note.length &&
+            state.link.length &&
+            state.name.length &&
+            state.deadline.length
         );
 
         setCanDisable(response);
@@ -35,17 +35,17 @@ function AdicionaPaletaModal({ closeModal, onCreatePaleta }) {
     });
 
     const createPaleta = async () => {
-        const renomeiaCaminhoFoto = (fotoPath) => fotoPath.split("\\").pop();
+        const renomeiaCaminholink = (linkPath) => linkPath.split("\\").pop();
 
-        const { sabor, recheio, descricao, preco, foto } = state;
+        const { name, type, note, deadline, link } = state;
 
-        const titulo = sabor + (recheio && " com " + recheio);
+        const total = name + (type && " de " + type);
 
         const paleta = {
-            sabor: titulo,
-            descricao,
-            preco,
-            foto: `assets/images/${renomeiaCaminhoFoto(foto)}`,
+            name: total,
+            note,
+            deadline,
+            link,
         };
 
         const response = await PaletaService.create(paleta);
@@ -59,56 +59,63 @@ function AdicionaPaletaModal({ closeModal, onCreatePaleta }) {
                 <form autocomplete="off">
                     <h2> Adicionar ao Cardápio </h2>
                     <div>
-                        <label className="AdicionaPaletaModal__text" htmlFor="preco"> Preco: </label>
+                        <label className="AdicionaPaletaModal__text" htmlFor="deadline"> deadline: </label>
                         <input
-                            id="preco"
-                            placeholder="10,00"
+                            id="deadline"
+                            placeholder="Cinco dias"
                             type="text"
-                            value={state.preco}
+                            value={state.deadline}
                             required
-                            onChange={(e) => handleChange(e, "preco")} />
+                            onChange={(e) => handleChange(e, "deadline")} />
                     </div>
                     <div>
-                        <label className="AdicionaPaletaModal__text" htmlFor="sabor"> Sabor: </label>
+                        <label className="AdicionaPaletaModal__text" htmlFor="name"> name: </label>
                         <input
-                            id="sabor"
-                            placeholder="Chocolate"
+                            id="name"
+                            placeholder="Nome"
                             type="text"
-                            value={state.sabor}
+                            value={state.name}
                             required
-                            onChange={(e) => handleChange(e, "sabor")} />
+                            onChange={(e) => handleChange(e, "name")} />
                     </div>
                     <div>
-                        <label className="AdicionaPaletaModal__text" htmlFor="recheio"> Recheio: </label>
+                        <label className="AdicionaPaletaModal__text" htmlFor="priority"> priority: </label>
                         <input
-                            id="recheio"
-                            placeholder="Banana"
+                            id="priority"
+                            placeholder="Um"
                             type="text"
-                            value={state.recheio}
-                            onChange={(e) => handleChange(e, "recheio")} />
+                            value={state.priority}
+                            onChange={(e) => handleChange(e, "priority")} />
                     </div>
                     <div>
-                        <label className="AdicionaPaletaModal__text" htmlFor="descricao"> Descricao: </label>
+                        <label className="AdicionaPaletaModal__text" htmlFor="type"> type: </label>
                         <input
-                            id="descricao"
-                            placeholder="Detalhe o produto"
+                            id="type"
+                            placeholder="Comida, calcado, ..."
                             type="text"
-                            value={state.descricao}
-                            required
-                            onChange={(e) => handleChange(e, "descricao")} />
+                            value={state.type}
+                            onChange={(e) => handleChange(e, "type")} />
                     </div>
                     <div>
-                        <label className="AdicionaPaletaModal__text  AdicionaPaletaModal__foto-label" htmlFor="foto" >
-                            {!state.foto.length ? "Selecionar Imagem" : state.foto}
-                        </label>
+                        <label className="AdicionaPaletaModal__text" htmlFor="note"> note: </label>
                         <input
-                            className=" AdicionaPaletaModal__foto"
-                            id="foto"
-                            type="file"
-                            accept="image/png, image/gif, image/jpeg"
-                            value={state.foto}
+                            id="note"
+                            placeholder="Detalhe do produto"
+                            type="text"
+                            value={state.note}
                             required
-                            onChange={(e) => handleChange(e, "foto")} />
+                            onChange={(e) => handleChange(e, "note")} />
+                    </div>
+                    <div>
+                        <label className="AdicionaPaletaModal__text" htmlFor="link" > link: </label>
+                        <input
+                            className=" AdicionaPaletaModal__text"
+                            id="link"
+                            placeholder=" link"
+                            type="text"
+                            value={state.link}
+                            required
+                            onChange={(e) => handleChange(e, "link")} />
                     </div>
 
                     <button

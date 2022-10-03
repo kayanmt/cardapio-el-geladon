@@ -17,22 +17,22 @@
     flex-direction: column;
   }
   
-  .PaletaDetalhesModal__titulo {
+  .PaletaDetalhesModal__type {
     font-size: 2em;
     font-weight: 700;
     line-height: 100%;
   }
   
-  .PaletaDetalhesModal__descricao {
+  .PaletaDetalhesModal__note {
     font-size: 1em;
   }
   
-  .PaletaDetalhesModal__preco {
+  .PaletaDetalhesModal__deadline {
     color: darkviolet;
     font-size: 2.5em;
   }
   
-  .PaletaDetalhesModal__foto {
+  .PaletaDetalhesModal__link {
     margin-right: -100px;
     z-index: 0;
   }
@@ -43,21 +43,21 @@
       height: 100vh;
     }
   
-    .PaletaDetalhesModal__foto {
+    .PaletaDetalhesModal__link {
       height: 250px;
       margin-top: 50px;
       margin-right: -100px;
     }
   
-    .PaletaDetalhesModal__preco {
+    .PaletaDetalhesModal__deadline {
       font-size: 2em;
     }
   
-    .PaletaDetalhesModal__titulo {
+    .PaletaDetalhesModal__type {
       font-size: 1.5em;
     }
   
-    .PaletaDetalhesModal__descricao {
+    .PaletaDetalhesModal__note {
       font-size: 0.9em;
     }
   }

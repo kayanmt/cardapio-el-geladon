@@ -1,3 +1,8 @@
+Lista de mercado
+
+preencher assim
+{"name": Nome do produto, type: tipo do produto (comida, roupa..., nao obrigatorio), "link":Se houver (caso não haja colocar qualquer coisa, as vezes quer-se comprar algo da internet),"priority": Nivel de prioridade,"deadline":prazo max. para obter,"note": descricao do produto ou do porque comprar}.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -68,3 +73,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+Backend : https://github.com/kayanmt/github-repository-management-backend-v1.0-main.git
+
+Heroku: https://loginapirm.herokuapp.com/

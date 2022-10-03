@@ -30,9 +30,9 @@ function PaletaListaItem({
     <div className="PaletaListaItem" onClick={() => clickItem(paleta.id)}>
       {badgeCounter(quantidadeSelecionada, index)}
       <div>
-        <div className="PaletaListaItem__titulo"> {paleta.titulo} </div>
-        <div className="PaletaListaItem__preco"> R$ {paleta.preco.toFixed(2)} </div>
-        <div className="PaletaListaItem__descricao"> {paleta.descricao} </div>
+        <div className="PaletaListaItem__priority"> {paleta.priority} </div>
+        <div className="PaletaListaItem__deadline"> R$ {paleta.deadline.toFixed(2)} </div>
+        <div className="PaletaListaItem__note"> {paleta.note} </div>
         <div className="PaletaListaItem__acoes Acoes">
           <button
             className={`Acoes__adicionar ${ !quantidadeSelecionada && "Acoes__adicionar--preencher" }`}
@@ -43,9 +43,9 @@ function PaletaListaItem({
         </div>
       </div>
       <img
-        className="PaletaListaItem__foto"
-        src={paleta.foto}
-        alt={`Paleta de ${paleta.sabor}`}
+        className="PaletaListaItem__link"
+        src={paleta.link}
+        alt={`Paleta de ${paleta.name}`}
       />
     </div>
   );

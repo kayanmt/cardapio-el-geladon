@@ -3,15 +3,15 @@ import { Api } from "../helpers/Api";
 const parseResponse = (response) => response.json();
 
 const transformPaleta = (paleta) => {
-  const [sabor, recheio] = paleta.sabor.split(" com ");
+  const [name, type] = paleta.name.split(" de ");
 
   return {
     ...paleta,
     id: paleta._id,
-    titulo: paleta.sabor,
-    sabor,
-    ...(recheio && { recheio }),
-    possuiRecheio: Boolean(recheio),
+    type: paleta.name,
+    name,
+    ...(type && { type }),
+    possuitype: Boolean(type),
   };
 };
 
