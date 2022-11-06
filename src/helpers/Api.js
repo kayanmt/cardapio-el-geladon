@@ -6,8 +6,15 @@ const PaletaContext = {
     updatePaletaById: (id) => `${PaletaContext.paletaEndpoint()}/update-paleta/${id}`,
     deletePaletaById: (id) => `${PaletaContext.paletaEndpoint()}/delete-paleta/${id}`,
   };
+
+  const SacolaContext = {
+    getSacola: () => `${PaletaContext.paletaEndpoint()}/all-carrinho`,
+    createSacola: () => `${PaletaContext.paletaEndpoint()}/create-carrinho`,
+    purchase: () => `${PaletaContext.paletaEndpoint()}/finish-carrinho`,
+  }
   
   export const Api = {
     baseUrl: "https://loginapirm.herokuapp.com",
     ...PaletaContext,
+    ...SacolaContext,
   };
