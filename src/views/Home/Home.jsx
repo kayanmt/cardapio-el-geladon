@@ -1,15 +1,14 @@
-import PaletaLista from "./PaletaLista";
+import PaletaLista from "../../components/PaletaLista";
 import './Home.css';
-import sacola from "../assets/icons/sacola.svg";
-import logo from "../assets/logo.svg";
-import AdicionaPaletaModal from "../components/AdicionaPaletaModal/AdicionaPaletaModal";
+import sacola from "../../assets/icons/sacola.svg";
+import logo from "../../assets/logo.svg";
 import { useState } from "react";
-import Navbar from "../components/Navbar/Navbar";
-import AdicionaEditaPaletaModal from "components/AdicionaEditaPaletaModal/AdicionaEditaPaletaModal";
-import { ActionMode } from "constants/index";
-import DeletaPaletaModal from "components/DeletaPaletaModal/DeletaPaletaModal";
-import SacolaModal from "components/SacolaModal/SacolaModal";
-import { SacolaService } from "services/SacolaService";
+import Navbar from "../../components/Navbar/Navbar";
+import AdicionaEditaPaletaModal from "../../components/AdicionaEditaPaletaModal/AdicionaEditaPaletaModal";
+import { ActionMode } from "../../constants/index";
+import DeletaPaletaModal from "../../components/DeletaPaletaModal/DeletaPaletaModal";
+import SacolaModal from "../../components/SacolaModal/SacolaModal";
+import { SacolaService } from "../../services/SacolaService";
 
 function Home() {
     const [canShowAdicionaPaletaModal, setCanShowAdicionaPaletaModal] = useState(false);
@@ -53,9 +52,9 @@ function Home() {
     <Navbar
   mode={modoAtual}
   createPaleta={() => setCanShowAdicionaPaletaModal(true)}
-  deletePaleta={() => handleActions(ActionMode.DELETAR)}
+  deletePaleta={() => handleDeletePaleta(ActionMode.DELETAR)}
   openBag={abrirSacola}
-  updatePaleta={() =>  handleActions(ActionMode.ATUALIZAR)} />
+  updatePaleta={() =>  handleUpdatePaleta(ActionMode.ATUALIZAR)} />
     <div className="Home__header Header">
   <div className="row">
       <div className="Header__logo Logo">
@@ -89,7 +88,7 @@ function Home() {
   updatePaleta={handleUpdatePaleta} />
                 {
                     canShowAdicionaPaletaModal && (
-                    <AdicionaPaletaModal
+                    <AdicionaEditaPaletaModal
                         closeModal={() => setCanShowAdicionaPaletaModal(false)}
                         onCreatePaleta={(paleta) => setPaletaParaAdicionar(paleta)} />
                     )

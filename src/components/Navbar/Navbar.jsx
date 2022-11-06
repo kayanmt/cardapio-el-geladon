@@ -2,9 +2,9 @@ import "./Navbar.css";
 import paleta from "../../assets/icons/paleta.svg"
 import sacola from "../../assets/icons/sacola.svg";
 import logo from "../../assets/logo.svg";
-import atualizar from "assets/icons/atualizar.svg"
-import { ActionMode } from "constants/index";
-import deletar from "assets/icons/deletar.svg"
+import atualizar from "../../assets/icons/atualizar.svg"
+import { ActionMode } from "../../constants/index";
+import deletar from "../../assets/icons/deletar.svg"
 
 function Navbar({ createPaleta, updatePaleta, mode, deletePaleta, openBag }) {
 

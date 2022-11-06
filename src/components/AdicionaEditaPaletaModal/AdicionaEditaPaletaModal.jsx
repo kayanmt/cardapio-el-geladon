@@ -1,8 +1,8 @@
 import "./AdicionaEditaPaletaModal.css";
 import { useState, useEffect } from "react";
-import Modal from "components/Modal/Modal";
-import { PaletaService } from "services/PaletaService";
-import { ActionMode } from "constants/index";
+import Modal from "../../components/Modal/Modal";
+import { PaletaService } from "../../services/PaletaService";
+import { ActionMode } from "../../constants/index";
 
 function AdicionaEditaPaletaModal({ closeModal, onCreatePaleta, mode, paletaToUpdate, onUpdatePaleta }) {
   const form = {

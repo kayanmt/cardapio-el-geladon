@@ -1,10 +1,10 @@
 import "./PaletaLista.css";
 import { useState, useEffect, useCallback } from "react";
-import PaletaListaItem from "components/PaletaListaItem/PaletaListaItem";
-import { PaletaService } from "services/PaletaService";
-import PaletaDetalhesModal from "components/PaletaDetalhesModal/PaletaDetalhesModal";
-import { ActionMode } from "constants/index";
-import { matchByText } from "helpers/utils";
+import PaletaListaItem from "../components/PaletaListaItem/PaletaListaItem";
+import { PaletaService } from "../services/PaletaService";
+import PaletaDetalhesModal from "../components/PaletaDetalhesModal/PaletaDetalhesModal";
+import { ActionMode } from "../constants/index";
+import { matchByText } from "../helpers/utils";
 
 
 function PaletaLista({ paletaCriada, mode, updatePaleta, deletePaleta, paletaEditada, paletaRemovida }) {

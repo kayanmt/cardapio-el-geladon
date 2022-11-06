@@ -1,4 +1,4 @@
-import { ActionMode } from 'constants/index';
+import { ActionMode } from '../../constants/index';
 import './PaletaListaItem.css';
 
 function PaletaListaItem({ paleta, quantidadeSelecionada, index, onRemove, onAdd, clickItem, mode }) {

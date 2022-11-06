@@ -1,6 +1,6 @@
 import "./DeletaPaletaModal.css";
-import Modal from "components/Modal/Modal";
-import { PaletaService } from "services/PaletaService";
+import Modal from "../../components/Modal/Modal";
+import { PaletaService } from "../../services/PaletaService";
 
 function DeletaPaletaModal({ closeModal, paletaParaDeletar, onDeletePaleta }) {
   const handleDelete = async (paleta) => {
